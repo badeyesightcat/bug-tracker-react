@@ -1,9 +1,9 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import { configureStore, combineReducers } from '@reduxjs/toolkit'
-import { Provider } from 'react-redux'
-import App from './App'
-import './index.css'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { configureStore, combineReducers } from '@reduxjs/toolkit';
+import { Provider } from 'react-redux';
+import App from './App';
+import './index.css';
 
 // Reducers
 import authReducer from './Controllers/Redux/authSlice';
@@ -12,20 +12,19 @@ import userReducer from './Controllers/Redux/userSlice';
 
 // Redux configuration
 const reducer = combineReducers({
-    auth: authReducer,
-    bug: bugReducer,
-    user: userReducer,
+  auth: authReducer,
+  bug: bugReducer,
+  user: userReducer,
 });
 
 const store = configureStore({
-    reducer,
+  reducer,
 });
-
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Provider store={store}>
-        <App />
+      <App />
     </Provider>
   </React.StrictMode>,
-)
+);
