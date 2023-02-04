@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --white: #fff;
+  --fontColor: #2e3f2f;
+
+  --warm500: #eed7c5;
+  --warm700: #fcc7b5;
+  --neutral300: #ddd9dd;
+  --neutral500: #bbb6a5;
+  --neutral700: #b6acb0;
+
+  --primaryMain: #4eaed2;
+  --primaryDark: #427b9e;
+  --secondaryMain: #f1e270;
+  --secondaryDark: #cfa06c;
+
+  /* --neutral700: #d9d0d0;
+  --primaryColor: #314e53;
+  --oldCopper: #7e5233;
+  --secondaryColor: #b98753;
+  --pointColor: #af8246;
+  --englishWalnut: #442e26;
+  --mischka: #dadade;
+  --shark: #2a2f33;
+  --mantle: #8c9491;
+  --manatee: #8c8c9c; */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.0625rem;
+  box-sizing: border-box;
+}
+
+.brandname {
+  font-size: 2rem;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  color: var(--secondaryMain);
+  font-weight: 700;
+}
+
+input:focus {
+  outline: solid 3px var(--secondaryMain);
+  border-radius: 0.125rem;
+  box-shadow: 0 0.5rem 1.5rem var(--fontColor);
+}
