@@ -1,11 +1,10 @@
-import { useState } from 'react'
+import Login from './Views/Login/login';
+import { useSelector } from 'react-redux';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const { auth } = useSelector((state) => state);
 
-  return (
-    <></>
-  )
+  return <>{!auth.loggedIn ? <Login /> : <h1>Hello there</h1>}</>;
 }
 
-export default App
+export default App;
