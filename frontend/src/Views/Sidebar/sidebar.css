@@ -1,0 +1,58 @@
+.sidebar {
+  position: fixed;
+  background: var(--warm500);
+  width: 25%;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.brandname.small {
+  letter-spacing: 0.5rem;
+}
+
+.brandname.dark {
+  color: var(--white);
+}
+
+.has-brandname {
+  padding: 0.25rem 0.5rem;
+  border-bottom: 0.25rem solid var(--white);
+}
+
+.gnb-menu-list {
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+.nav-link {
+  display: block;
+  text-align: center;
+  padding: 0.5rem 0;
+  transition: padding 200ms ease-in-out, text-align 200ms ease-in-out;
+}
+.nav-link:focus,
+.nav-link:hover {
+  padding: 0.5rem 0.75rem 0.5rem 0;
+  text-align: right;
+  transition: padding 200ms ease-in-out, text-align 200ms ease-in-out;
+  border-bottom: double 0.25rem var(--fontColor);
+}
+
+.btn-signOut {
+  font-size: 1rem;
+  margin-top: auto;
+  padding: 1rem 0;
+  background-blend-mode: multiply;
+  color: var(--white);
+  transition: color 300ms ease-in-out, adding 300ms ease-in-out;
+}
+.btn-signOut:focus,
+.btn-signOut:hover {
+  border-top: double 0.25rem var(--fontColor);
+  color: var(--fontColor);
+  text-align: right;
+  padding: 1rem 1rem 1rem 0;
+  transition: color 300ms, padding 300ms;
+}
