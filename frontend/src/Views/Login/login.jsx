@@ -17,7 +17,7 @@ export default () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSignIn = (e) => {
     e.preventDefault();
     dispatch(signIn(formField));
   };
@@ -44,8 +44,8 @@ export default () => {
             className='login-input'
           />
         </fieldset>
-        <button type='submit' onClick={handleSubmit} className='login-btn'>
-          Log In
+        <button type='submit' onClick={handleSignIn} className='login-btn'>
+          Sign In
         </button>
       </form>
     </section>
