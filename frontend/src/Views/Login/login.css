@@ -35,6 +35,7 @@
   height: 2.5rem;
   color: var(--white);
 }
+
 .login-btn[type='submit'].readyToSubmit {
   background: var(--secondaryMain);
   color: var(--fontColor);
