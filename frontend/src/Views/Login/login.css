@@ -1,0 +1,42 @@
+.login-wrap {
+  position: relative;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.25) url(../../assets/images/visit-greenland.jpg)
+    no-repeat; /* from "Visit Greenland(@visitgreenland) */
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+
+.login-form {
+  position: relative;
+  z-index: 1;
+  gap: 2rem;
+}
+
+.login-input-section {
+  gap: 1rem;
+}
+
+.login-input {
+  padding: 0 0.5rem;
+  height: 2.5rem;
+  background: var(--neutral700);
+  border: 0;
+  color: var(--fontColor);
+}
+
+.login-input::placeholder {
+  color: var(--white);
+}
+
+.login-btn[type='submit'] {
+  /* border: 0.25rem solid var(--primaryDark); */
+  background: var(--secondaryDark);
+  height: 2.5rem;
+  color: var(--white);
+}
+.login-btn[type='submit'].readyToSubmit {
+  background: var(--secondaryMain);
+  color: var(--fontColor);
+  font-weight: 700;
+}
