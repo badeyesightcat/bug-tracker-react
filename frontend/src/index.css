@@ -8,12 +8,17 @@
 
   --warm500: #eed7c5;
   --warm700: #fcc7b5;
+
+  --neutral100: #e7e2e5;
   --neutral300: #ddd9dd;
   --neutral500: #bbb6a5;
   --neutral700: #b6acb0;
 
+  --primaryLight: rgb(142, 159, 212);
   --primaryMain: #4eaed2;
   --primaryDark: #427b9e;
+  --primaryStrong: #0b1621;
+
   --secondaryMain: #f1e270;
   --secondaryDark: #cfa06c;
 
@@ -49,4 +54,13 @@ input:focus {
   outline: solid 3px var(--secondaryMain);
   border-radius: 0.125rem;
   box-shadow: 0 0.5rem 1.5rem var(--fontColor);
+}
+
+.page-container {
+  padding: 65px 0 0 20%;
+  height: 100vh;
+}
+
+.theme-light {
+  background-color: var(--neutral100);
 }
