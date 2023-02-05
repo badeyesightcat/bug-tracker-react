@@ -13,18 +13,22 @@ import userReducer from './Controllers/Redux/userSlice';
 // Redux configuration
 const reducer = combineReducers({
   auth: authReducer,
-  bug: bugReducer,
+  bugs: bugReducer,
   user: userReducer,
 });
 
 const store = configureStore({
   reducer,
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: false,
+    }),
 });
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
-  </React.StrictMode>,
+  // <React.StrictMode>
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  // </React.StrictMode>,
 );
