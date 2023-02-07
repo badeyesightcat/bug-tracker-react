@@ -1,7 +1,7 @@
 .sidebar {
   position: fixed;
-  background: var(--warm500);
-  width: 25%;
+  background: var(--secondaryDark);
+  width: 20%;
   height: 100vh;
   top: 0;
   bottom: 0;
@@ -21,7 +21,7 @@
   border-bottom: 0.25rem solid var(--white);
 }
 
-.gnb-menu-list {
+.nav-list {
   margin-top: 2rem;
   gap: 1rem;
 }
@@ -30,14 +30,18 @@
   display: block;
   text-align: center;
   padding: 0.5rem 0;
-  transition: padding 200ms ease-in-out, text-align 200ms ease-in-out;
+  transition: padding 500ms ease-in-out, text-align 500ms ease-in-out;
 }
 .nav-link:focus,
 .nav-link:hover {
-  padding: 0.5rem 0.75rem 0.5rem 0;
+  padding: 0.5rem 0 0.5rem 2rem;
+  transition: padding 500ms ease-in-out;
+}
+.nav-link.active {
+  padding-right: 2rem;
   text-align: right;
-  transition: padding 200ms ease-in-out, text-align 200ms ease-in-out;
   border-bottom: double 0.25rem var(--fontColor);
+  transition: padding 500ms ease-in-out, text-align 500ms ease-in-out;
 }
 
 .btn-signOut {
