@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
+import classNames from 'classnames';
 import { signOut } from '../../Controllers/Redux/authSlice';
 import './sidebar.css';
 
@@ -10,6 +11,7 @@ export default () => {
   const handleSignOut = () => {
     dispatch(signOut);
   };
+  const [activeItemIdx, setActiveItemIdx] = useState(null);
 
   return (
     <aside className='sidebar flex flex-col'>
@@ -18,21 +20,39 @@ export default () => {
           landscape
         </h1>
       </Link>
-      <nav className='gnb'>
-        <ul className='gnb-menu-list flex flex-col'>
+      <nav className='nav-wrapper'>
+        <ul className='nav-list flex flex-col'>
           <li>
-            <Link className='nav-link' to='/'>
+            <Link
+              className={classNames({
+                'nav-link': true,
+                active: activeItemIdx === 0,
+              })}
+              onClick={() => setActiveItemIdx(0)}
+              to='/'>
               Dashboard
             </Link>
           </li>
           <li>
-            <Link className='nav-link' to='/viewBugs'>
+            <Link
+              className={classNames({
+                'nav-link': true,
+                active: activeItemIdx === 1,
+              })}
+              onClick={() => setActiveItemIdx(1)}
+              to='/viewBugs'>
               Bugs List
             </Link>
           </li>
           {auth.admin && (
             <li>
-              <Link className='nav-link' to='/createBug'>
+              <Link
+                className={classNames({
+                  'nav-link': true,
+                  active: activeItemIdx === 2,
+                })}
+                onClick={() => setActiveItemIdx(2)}
+                to='/createBug'>
                 Create Bug
               </Link>
             </li>
