@@ -1,11 +1,6 @@
 .sidebar {
-  position: fixed;
-  background: var(--secondaryDark);
-  width: 20%;
-  height: 100vh;
-  top: 0;
-  bottom: 0;
-  left: 0;
+  background: var(--neutral200);
+  grid-area: sidebar;
 }
 
 .brandname.small {
