@@ -1,22 +1,26 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getBugs } from '../../Controllers/Redux/bugSlice';
+import BugItem from '../BugItem/bugItem';
 
 export default () => {
   const dispatch = useDispatch();
-  const { bug } = useSelector((state) => state);
+  const { bugs } = useSelector((state) => state);
+
+  const handleBugItemClick = (content) => {
+    console.log(content);
+  };
 
   useEffect(() => {
     dispatch(getBugs());
-  }, [bug.length < 1]);
+  }, [bugs.length < 1]);
 
   return (
-    <div className='bugs-view'>
-      <h2>bug list</h2>
+    <div className='page-container theme-light'>
       <ul className='bugs-list'>
-        {bug.map((item) => {
-          return <li key={item._id}>bug item</li>;
-        })}
+        {bugs?.map((item, idx) => (
+          <BugItem key={idx} clicked={handleBugItemClick} {...item} />
+        ))}
       </ul>
     </div>
   );
