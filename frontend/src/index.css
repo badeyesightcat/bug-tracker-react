@@ -4,56 +4,43 @@
 
 :root {
   --white: #fff;
-  --fontColor: #2e3f2f;
 
-  --warm500: #eed7c5;
-  --warm700: #fcc7b5;
+  --primeMain: #0320dc;
+  --primeLight: #556aed;
+  --secondaryMain: #d6f223;
 
-  --neutral100: #e7e2e5;
-  --neutral300: #ddd9dd;
-  --neutral500: #bbb6a5;
-  --neutral700: #b6acb0;
+  --neutral900: #0c0c0c;
+  --neutral800: #2f2f31;
+  --neutral700: #48484b;
+  --neutral600: #848686;
+  --neutral500: #c6cacc;
+  --neutral400: #d3d9dd;
+  --neutral300: #dee4e7;
+  --neutral200: #f5f5f5;
 
-  --primaryLight: rgb(142, 159, 212);
-  --primaryMain: #4eaed2;
-  --primaryDark: #427b9e;
-  --primaryStrong: #0b1621;
+  --fontColor: #2f2f31;
 
-  --secondaryMain: #f1e270;
-  --secondaryDark: #cfa06c;
-
-  /* --neutral700: #d9d0d0;
-  --primaryColor: #314e53;
-  --oldCopper: #7e5233;
-  --secondaryColor: #b98753;
-  --pointColor: #af8246;
-  --englishWalnut: #442e26;
-  --mischka: #dadade;
-  --shark: #2a2f33;
-  --mantle: #8c9491;
-  --manatee: #8c8c9c; */
+  --fontFamily: 'Epilogue', sans-serif;
 }
 
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Quicksand', sans-serif;
+  font-family: var(--fontFamily);
   font-size: 1.0625rem;
   box-sizing: border-box;
 }
 
 .brandname {
+  text-indent: 1rem;
   font-size: 2rem;
-  letter-spacing: 1rem;
+  line-height: 4rem;
+  letter-spacing: 1.25rem;
   text-transform: uppercase;
-  color: var(--secondaryMain);
+  color: var(--neutral900);
   font-weight: 700;
-}
-
-input:focus {
-  outline: solid 3px var(--secondaryMain);
-  border-radius: 0.125rem;
-  box-shadow: 0 0.5rem 1.5rem var(--fontColor);
+  background-color: var(--secondaryMain);
+  border-radius: 4rem 0 4rem 0;
 }
 
 .page-container {
