@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
+import classNames from 'classnames';
 import { useDispatch } from 'react-redux';
 import { signIn } from '../../Controllers/Redux/authSlice';
 import './login.css';
@@ -8,6 +9,9 @@ export default () => {
   const [formField, setFormField] = useState({
     username: '',
     password: '',
+  });
+  const [submitBtnClassName, setSubmitBtnClassName] = useState({
+    'login-btn': true,
   });
 
   const handleFormFieldChange = (e) => {
@@ -22,11 +26,18 @@ export default () => {
     dispatch(signIn(formField));
   };
 
+  useMemo(() => {
+    setSubmitBtnClassName((prev) => ({
+      ...prev,
+      readyToSubmit: formField.username !== '' && formField.password !== '',
+    }));
+  }, [formField]);
+
   return (
-    <section className='login-wrap flex justify-center items-center'>
+    <section className='login-wrap flex justify-center items-center flex-col'>
+      <h1 className='brandname text-center mb-10'>Landscape</h1>
       <form action='' className='login-form flex flex-col'>
         <fieldset className='flex flex-col login-input-section'>
-          <legend className='brandname text-center mb-8'>Landscape</legend>
           <input
             type='text'
             name='username'
@@ -34,6 +45,7 @@ export default () => {
             onChange={handleFormFieldChange}
             value={formField.name}
             className='login-input'
+            autoComplete='false'
           />
           <input
             type='password'
@@ -42,9 +54,13 @@ export default () => {
             onChange={handleFormFieldChange}
             value={formField.password}
             className='login-input'
+            autoComplete='false'
           />
         </fieldset>
-        <button type='submit' onClick={handleSignIn} className='login-btn'>
+        <button
+          type='button'
+          onClick={handleSignIn}
+          className={classNames(submitBtnClassName)}>
           Sign In
         </button>
       </form>
