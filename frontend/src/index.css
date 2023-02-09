@@ -31,6 +31,14 @@
   box-sizing: border-box;
 }
 
+#root {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 20% 80%;
+  grid-template-areas: 'sidebar page-container';
+}
+
 .brandname {
   text-indent: 1rem;
   font-size: 2rem;
@@ -44,8 +52,7 @@
 }
 
 .page-container {
-  padding: 65px 0 0 20%;
-  height: 100vh;
+  grid-area: page-container;
 }
 
 .theme-light {
