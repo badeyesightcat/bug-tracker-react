@@ -9,6 +9,7 @@
 .login-wrap::after {
   position: absolute;
   content: '';
+  z-index: 1;
 }
 
 .login-wrap::before {
@@ -33,9 +34,14 @@
   border-radius: 0 30rem 30rem 45rem;
 }
 
+.login-wrap .brandname {
+  z-index: 5;
+  margin-left: -8rem;
+}
+
 .login-form {
   position: relative;
-  z-index: 1;
+  z-index: 5;
   gap: 3rem;
 }
 
