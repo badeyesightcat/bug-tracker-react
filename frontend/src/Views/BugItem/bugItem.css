@@ -1,0 +1,10 @@
+.bug-item {
+  background: rgba(142, 159, 212, 0.25);
+  border-radius: 2rem;
+  color: var(--fontColor);
+}
+
+.bug-item:focus,
+.bug-item:hover {
+  background: var(--secondaryMain);
+}
