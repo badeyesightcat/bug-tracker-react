@@ -36,7 +36,10 @@ export default () => {
   return (
     <section className='login-wrap flex justify-center items-center flex-col'>
       <h1 className='brandname text-center mb-10'>Landscape</h1>
-      <form action='' className='login-form flex flex-col'>
+      <form
+        action=''
+        className='login-form flex flex-col'
+        onSubmit={handleSignIn}>
         <fieldset className='flex flex-col login-input-section'>
           <input
             type='text'
@@ -57,10 +60,7 @@ export default () => {
             autoComplete='false'
           />
         </fieldset>
-        <button
-          type='button'
-          onClick={handleSignIn}
-          className={classNames(submitBtnClassName)}>
+        <button type='submit' className={classNames(submitBtnClassName)}>
           Sign In
         </button>
       </form>
