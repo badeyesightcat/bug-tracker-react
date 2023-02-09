@@ -17,40 +17,31 @@ export default () => {
     <aside className='sidebar flex flex-col'>
       <Link to='/'>
         <h1 className='brandname small' title='Go Home'>
-          landscape
+          Landscape
         </h1>
       </Link>
       <nav className='nav-wrapper'>
         <ul className='nav-list flex flex-col'>
-          <li>
+          <li className={classNames({ active: activeItemIdx === 0 })}>
             <Link
-              className={classNames({
-                'nav-link': true,
-                active: activeItemIdx === 0,
-              })}
+              className='nav-link'
               onClick={() => setActiveItemIdx(0)}
               to='/'>
               Dashboard
             </Link>
           </li>
-          <li>
+          <li className={classNames({ active: activeItemIdx === 1 })}>
             <Link
-              className={classNames({
-                'nav-link': true,
-                active: activeItemIdx === 1,
-              })}
+              className='nav-link'
               onClick={() => setActiveItemIdx(1)}
               to='/viewBugs'>
               Bugs List
             </Link>
           </li>
           {auth.admin && (
-            <li>
+            <li className={classNames({ active: activeItemIdx === 2 })}>
               <Link
-                className={classNames({
-                  'nav-link': true,
-                  active: activeItemIdx === 2,
-                })}
+                className='nav-link'
                 onClick={() => setActiveItemIdx(2)}
                 to='/createBug'>
                 Create Bug
