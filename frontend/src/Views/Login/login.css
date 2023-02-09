@@ -1,16 +1,41 @@
 .login-wrap {
   position: relative;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.25) url(../../assets/images/visit-greenland.jpg)
-    no-repeat; /* from "Visit Greenland(@visitgreenland) */
-  background-size: cover;
-  background-blend-mode: multiply;
+  background-color: var(--neutral700);
+}
+
+.login-wrap::before,
+.login-wrap::after {
+  position: absolute;
+  content: '';
+}
+
+.login-wrap::before {
+  width: 80vw;
+  height: 80vh;
+  border: 0.5rem solid var(--neutral900);
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  left: 13vw;
+  top: 13vh;
+  border-radius: 0 30rem 0 30rem;
+}
+
+.login-wrap::after {
+  width: 80vw;
+  height: 75vh;
+  border: 0.5rem solid var(--secondaryMain);
+  border-top-color: transparent;
+  border-left-color: transparent;
+  right: 15vw;
+  bottom: 10vh;
+  border-radius: 0 30rem 30rem 45rem;
 }
 
 .login-form {
   position: relative;
   z-index: 1;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 .login-input-section {
@@ -18,26 +43,39 @@
 }
 
 .login-input {
-  padding: 0 0.5rem;
-  height: 2.5rem;
-  background: var(--neutral700);
-  border: 0;
-  color: var(--fontColor);
+  width: 25rem;
+  height: 4rem;
+  font: 400 1.5rem/4rem var(--fontFamily);
+  text-indent: 2rem;
+  letter-spacing: 0.75rem;
+  color: var(--secondaryMain);
+  border-radius: 2rem;
+  border: solid 0.25rem var(--secondaryMain);
+  outline: transparent;
+  background-color: transparent;
 }
 
 .login-input::placeholder {
-  color: var(--white);
+  color: var(--secondaryMain);
+  font-size: 1rem;
 }
 
-.login-btn[type='submit'] {
-  /* border: 0.25rem solid var(--primaryDark); */
-  background: var(--secondaryDark);
-  height: 2.5rem;
-  color: var(--white);
+.login-input:focus {
+  background-color: var(--neutral800);
+  box-shadow: 0 0.5rem 1.5rem var(--fontColor);
 }
 
-.login-btn[type='submit'].readyToSubmit {
+.login-btn {
+  border: 0.25rem solid var(--secondaryMain);
+  background-color: transparent;
+  height: 4rem;
+  color: var(--secondaryMain);
+  outline: none;
+  border-radius: 2rem;
+}
+
+.login-btn.readyToSubmit {
   background: var(--secondaryMain);
-  color: var(--fontColor);
+  color: var(--neutral900);
   font-weight: 700;
 }
