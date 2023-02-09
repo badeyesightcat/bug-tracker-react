@@ -63,3 +63,7 @@
 .theme-light {
   background-color: var(--neutral100);
 }
+
+.theme-dark {
+  background-color: var(--neutral900);
+}
