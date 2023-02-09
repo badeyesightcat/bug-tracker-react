@@ -15,8 +15,8 @@ export default () => {
 
   return (
     <aside className='sidebar flex flex-col'>
-      <Link to='/' className='has-brandname'>
-        <h1 className='brandname small dark' title='Go Home'>
+      <Link to='/'>
+        <h1 className='brandname small' title='Go Home'>
           landscape
         </h1>
       </Link>
