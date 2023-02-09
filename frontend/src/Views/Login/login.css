@@ -2,6 +2,7 @@
   position: relative;
   height: 100vh;
   background-color: var(--neutral700);
+  grid-area: 1 / 1 / 2 / 3;
 }
 
 .login-wrap::before,
