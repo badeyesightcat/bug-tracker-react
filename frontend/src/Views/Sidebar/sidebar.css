@@ -1,57 +1,68 @@
 .sidebar {
-  background: var(--neutral200);
+  background: var(--secondaryMain);
   grid-area: sidebar;
+  gap: 2rem;
 }
 
-.brandname.small {
-  letter-spacing: 0.5rem;
-}
-
-.brandname.dark {
-  color: var(--white);
-}
-
-.has-brandname {
-  padding: 0.25rem 0.5rem;
-  border-bottom: 0.25rem solid var(--white);
+.sidebar .brandname {
+  width: 12rem;
+  background-color: var(--neutral200);
 }
 
 .nav-list {
-  margin-top: 2rem;
   gap: 1rem;
 }
 
 .nav-link {
-  display: block;
-  text-align: center;
-  padding: 0.5rem 0;
-  transition: padding 500ms ease-in-out, text-align 500ms ease-in-out;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  font-size: 1.125rem;
+  transition: all 500ms ease-in-out;
+  z-index: 3;
 }
 .nav-link:focus,
 .nav-link:hover {
-  padding: 0.5rem 0 0.5rem 2rem;
-  transition: padding 500ms ease-in-out;
+  margin-left: 2.5rem;
+  transition: margin-left 500ms ease-in-out;
 }
-.nav-link.active {
-  padding-right: 2rem;
-  text-align: right;
-  border-bottom: double 0.25rem var(--fontColor);
-  transition: padding 500ms ease-in-out, text-align 500ms ease-in-out;
+.nav-list > li.active {
+  position: relative;
+}
+
+.nav-list > li.active::before,
+.nav-list > li.active::after {
+  position: absolute;
+  content: '';
+  width: 60%;
+  height: 100%;
+  border-radius: 2rem 0 2rem 2rem;
+}
+
+.nav-list > li.active::before {
+  top: 0;
+  left: 20%;
+  border: 3px solid var(--neutral900);
+  z-index: 2;
+}
+
+.nav-list > li.active::after {
+  top: 8%;
+  left: 22.5%;
+  background-color: var(--neutral200);
+  z-index: 1;
 }
 
 .btn-signOut {
+  height: 4rem;
   font-size: 1rem;
-  margin-top: auto;
-  padding: 1rem 0;
-  background-blend-mode: multiply;
-  color: var(--white);
-  transition: color 300ms ease-in-out, adding 300ms ease-in-out;
+  margin: auto 2rem 1rem 2rem;
 }
 .btn-signOut:focus,
 .btn-signOut:hover {
-  border-top: double 0.25rem var(--fontColor);
-  color: var(--fontColor);
-  text-align: right;
-  padding: 1rem 1rem 1rem 0;
-  transition: color 300ms, padding 300ms;
+  border: 3px solid var(--neutral900);
+  border-radius: 2rem;
+  transition: all ease-in-out 200ms;
 }
