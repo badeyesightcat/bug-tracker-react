@@ -1,7 +1,7 @@
 .login-wrap {
   position: relative;
   height: 100vh;
-  background-color: var(--neutral700);
+  background-color: rgb(var(--neutral700));
   grid-area: 1 / 1 / 2 / 3;
 }
 
@@ -15,7 +15,7 @@
 .login-wrap::before {
   width: 80vw;
   height: 80vh;
-  border: 0.5rem solid var(--neutral900);
+  border: 0.5rem solid rgb(var(--neutral900));
   border-bottom-color: transparent;
   border-right-color: transparent;
   left: 13vw;
@@ -26,7 +26,7 @@
 .login-wrap::after {
   width: 80vw;
   height: 75vh;
-  border: 0.5rem solid var(--secondaryMain);
+  border: 0.5rem solid rgb(var(--secondaryMain));
   border-top-color: transparent;
   border-left-color: transparent;
   right: 15vw;
@@ -55,34 +55,34 @@
   font: 400 1.5rem/4rem var(--fontFamily);
   text-indent: 2rem;
   letter-spacing: 0.75rem;
-  color: var(--secondaryMain);
+  color: rgb(var(--secondaryMain));
   border-radius: 2rem;
-  border: solid 0.25rem var(--secondaryMain);
+  border: solid 0.25rem rgb(var(--secondaryMain));
   outline: transparent;
   background-color: transparent;
 }
 
 .login-input::placeholder {
-  color: var(--secondaryMain);
+  color: rgb(var(--secondaryMain));
   font-size: 1rem;
 }
 
 .login-input:focus {
-  background-color: var(--neutral800);
-  box-shadow: 0 0.5rem 1.5rem var(--fontColor);
+  background-color: rgb(var(--neutral800));
+  box-shadow: 0 0.5rem 1.5rem rgb(var(--fontColor));
 }
 
 .login-btn {
-  border: 0.25rem solid var(--secondaryMain);
+  border: 0.25rem solid rgb(var(--secondaryMain));
   background-color: transparent;
   height: 4rem;
-  color: var(--secondaryMain);
+  color: rgb(var(--secondaryMain));
   outline: none;
   border-radius: 2rem;
 }
 
 .login-btn.readyToSubmit {
-  background: var(--secondaryMain);
-  color: var(--neutral900);
+  background: rgb(var(--secondaryMain));
+  color: rgb(var(--neutral900));
   font-weight: 700;
 }

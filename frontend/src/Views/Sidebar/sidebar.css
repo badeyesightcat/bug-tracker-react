@@ -1,12 +1,12 @@
 .sidebar {
-  background: var(--secondaryMain);
+  background-color: rgb(var(--secondaryMain));
   grid-area: sidebar;
   gap: 2rem;
 }
 
 .sidebar .brandname {
   width: 12rem;
-  background-color: var(--neutral200);
+  background-color: rgb(var(--neutral200));
 }
 
 .nav-list {
@@ -44,14 +44,14 @@
 .nav-list > li.active::before {
   top: 0;
   left: 20%;
-  border: 3px solid var(--neutral900);
+  border: 3px solid rgb(var(--primeMain));
   z-index: 2;
 }
 
 .nav-list > li.active::after {
   top: 8%;
   left: 22.5%;
-  background-color: var(--neutral200);
+  background-color: rgb(var(--neutral200));
   z-index: 1;
 }
 
@@ -62,7 +62,7 @@
 }
 .btn-signOut:focus,
 .btn-signOut:hover {
-  border: 3px solid var(--neutral900);
+  border: 3px solid rgb(var(--neutral900));
   border-radius: 2rem;
   transition: all ease-in-out 200ms;
 }
