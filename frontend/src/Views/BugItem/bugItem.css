@@ -1,10 +1,41 @@
+.bugs-list {
+  gap: 1.5rem;
+}
+
 .bug-item {
-  background: rgba(142, 159, 212, 0.25);
-  border-radius: 2rem;
-  color: var(--fontColor);
+  border: 3px solid rgba(var(--neutral900));
+  border-radius: 3rem;
+  color: rgb(var(--neutral900));
+  min-width: 16rem;
+  min-height: 15rem;
 }
 
 .bug-item:focus,
 .bug-item:hover {
-  background: var(--secondaryMain);
+  border-color: rgb(var(--primeMain));
+  background-color: rgb(var(--primeMain));
+  color: rgb(var(--neutral200));
+}
+
+.bug-item-title {
+  margin: 2rem;
+  font-size: 1.2rem;
+}
+
+.bug-item-priority,
+.bug-item-version,
+.bug-item-time {
+  margin: 0 2rem;
+}
+
+.bug-item-priority::before {
+  content: 'priority: ';
+}
+
+.bug-item-version::before {
+  content: 'version: ';
+}
+
+.bug-item-time::before {
+  content: 'reported on: ';
 }
