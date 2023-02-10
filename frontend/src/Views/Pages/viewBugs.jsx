@@ -17,7 +17,8 @@ export default () => {
 
   return (
     <div className='page-container theme-light'>
-      <ul className='bugs-list'>
+      <h2 className='page-title'>Bugs List</h2>
+      <ul className='bugs-list flex flex-wrap'>
         {bugs?.map((item, idx) => (
           <BugItem key={idx} clicked={handleBugItemClick} {...item} />
         ))}
