@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react';
+import classNames from 'classnames';
+import priorityController from '../../Controllers/priorityController';
 import './bugItem.css';
 
 export default function BugItem({ clicked, ...props }) {
@@ -14,6 +16,7 @@ export default function BugItem({ clicked, ...props }) {
     time,
     key,
   } = props;
+  const { level, color } = priorityController(priority);
 
   const handleClickBugItem = () => {
     clicked(_id);
@@ -24,9 +27,14 @@ export default function BugItem({ clicked, ...props }) {
   }, []);
 
   return (
-    <li className='bug-item flex flex-col' onClick={handleClickBugItem}>
+    <li className='bug-item' onClick={handleClickBugItem}>
       <h3 className='bug-item-title'>{title}</h3>
-      <h4 className='bug-item-priority'>{priority}</h4>
+      <h4
+        title={`Priority level: ${level}`}
+        className={classNames(['bug-item-priority', level.toLowerCase()])}
+        style={{ backgroundColor: color }}>
+        {level}
+      </h4>
       <h5 className='bug-item-version'>{version}</h5>
       <time className='bug-item-time'>{time}</time>
     </li>
