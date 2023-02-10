@@ -2,6 +2,13 @@
 
 **Bug tracker app using React, Redux**
 
+## How to run the app on the local machine
+
+- git clone
+- cd ./frontend
+- npm i
+- npm run dev
+
 ## Developed on
 
 - MVC model
