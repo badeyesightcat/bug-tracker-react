@@ -5,6 +5,19 @@ export function retrieveBugs() {
 
   data.push(
     new BugModel({
+      _id: 'fkdlkflkj123',
+      title: 'Missing something',
+      details: 'It cannot be explained without a screenshot',
+      steps: 'refer to the image attached',
+      version: 'v1.0',
+      assigned: 'Paul',
+      creator: 'Joe Mann',
+      priority: 2,
+      time: '10:30',
+    }),
+  );
+  data.push(
+    new BugModel({
       _id: 'MDU6SXNzdWUx',
       title: 'Found a bug',
       details: "I'm having a problem with this.",
