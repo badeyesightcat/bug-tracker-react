@@ -13,9 +13,11 @@
 
 .bug-item:focus,
 .bug-item:hover {
-  border-color: rgb(var(--primeMain));
-  background-color: rgb(var(--primeMain));
+  border-color: rgb(var(--primeLight));
+  background-color: rgb(var(--primeLight));
   color: rgb(var(--neutral200));
+  transform: scale(1.05);
+  transition: transform 500ms ease-in-out;
 }
 
 .bug-item-title {
@@ -30,13 +32,14 @@
 
 .bug-item-priority {
   position: absolute;
-  top: -0.5rem;
+  top: -0.75rem;
   right: -0.5rem;
   display: inline-flex;
   align-items: center;
-  height: 4rem;
+  height: 3.5rem;
   padding: 0 1rem;
-  border-radius: 2rem 0 2rem 2rem;
+  border-radius: 1.75rem 0 1.75rem 1.75rem;
+  font-size: 0.9rem;
   color: rgb(var(--neutral200));
 }
 .bug-item-priority.low {
