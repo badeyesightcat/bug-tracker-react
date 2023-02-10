@@ -3,6 +3,7 @@
 }
 
 .bug-item {
+  position: relative;
   border: 3px solid rgba(var(--neutral900));
   border-radius: 3rem;
   color: rgb(var(--neutral900));
@@ -22,14 +23,24 @@
   font-size: 1.2rem;
 }
 
-.bug-item-priority,
 .bug-item-version,
 .bug-item-time {
   margin: 0 2rem;
 }
 
-.bug-item-priority::before {
-  content: 'priority: ';
+.bug-item-priority {
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+  display: inline-flex;
+  align-items: center;
+  height: 4rem;
+  padding: 0 1rem;
+  border-radius: 2rem 0 2rem 2rem;
+  color: rgb(var(--neutral200));
+}
+.bug-item-priority.low {
+  color: rgb(var(--neutral900));
 }
 
 .bug-item-version::before {
