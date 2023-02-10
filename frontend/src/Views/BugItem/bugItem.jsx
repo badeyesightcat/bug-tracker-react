@@ -24,10 +24,10 @@ export default function BugItem({ clicked, ...props }) {
   }, []);
 
   return (
-    <li className='bug-item' onClick={handleClickBugItem}>
+    <li className='bug-item flex flex-col' onClick={handleClickBugItem}>
       <h3 className='bug-item-title'>{title}</h3>
-      <strong className='bug-item-priority'>{priority}</strong>
-      <strong className='bug-item-version'>{version}</strong>
+      <h4 className='bug-item-priority'>{priority}</h4>
+      <h5 className='bug-item-version'>{version}</h5>
       <time className='bug-item-time'>{time}</time>
     </li>
   );
