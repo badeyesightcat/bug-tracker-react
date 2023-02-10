@@ -5,20 +5,20 @@
 :root {
   --white: #fff;
 
-  --primeMain: rgb(3, 32, 220);
-  --primeLight: rgb(85, 106, 237);
-  --secondaryMain: rgb(214, 242, 35);
+  --primeMain: 3, 32, 220; /* rgb(3, 32, 220)*/
+  --primeLight: 85, 106, 237; /* rgb(85, 106, 237)*/
+  --secondaryMain: 214, 242, 35; /* rgb(214, 242, 35)*/
 
-  --neutral900: rgb(12, 12, 12);
-  --neutral800: rgb(47, 47, 49);
-  --neutral700: rgb(72, 72, 75);
-  --neutral600: rgb(132, 134, 134);
-  --neutral500: rgb(198, 202, 204);
-  --neutral400: rgb(211, 217, 221);
-  --neutral300: rgb(222, 228, 231);
-  --neutral200: rgb(245, 245, 245);
+  --neutral900: 12, 12, 12; /* rgb(12, 12, 12)*/
+  --neutral800: 47, 47, 49; /* rgb(47, 47, 49)*/
+  --neutral700: 72, 72, 75; /* rgb(72, 72, 75)*/
+  --neutral600: 132, 134, 134; /* rgb(132, 134, 134)*/
+  --neutral500: 198, 202, 204; /* rgb(198, 202, 204)*/
+  --neutral400: 211, 217, 221; /* rgb(211, 217, 221)*/
+  --neutral300: 222, 228, 231; /* rgb(222, 228, 231)*/
+  --neutral200: 245, 245, 245; /* rgb(245, 245, 245)*/
 
-  --fontColor: rgb(47, 47, 49);
+  --fontColor: 47, 47, 49; /* rgb(47, 47, 49)*/
 
   --fontFamily: 'Epilogue', sans-serif;
 }
@@ -46,9 +46,9 @@
   line-height: 4rem;
   letter-spacing: 1.25rem;
   text-transform: uppercase;
-  color: var(--neutral900);
+  color: rgb(var(--neutral900));
   font-weight: 700;
-  background-color: var(--secondaryMain);
+  background-color: rgb(var(--secondaryMain));
   border-radius: 4rem 0 4rem 0;
 }
 
@@ -58,12 +58,19 @@
 
 .page-container {
   grid-area: page-container;
+  padding: 0 2rem 3rem;
+}
+
+.page-title {
+  font: 5rem/1 var(--fontFamily);
+  margin: -1.25rem 0 2rem;
+  color: rgb(var(--primeMain));
 }
 
 .theme-light {
-  background-color: var(--neutral100);
+  background-color: rgb(var(--neutral100));
 }
 
 .theme-dark {
-  background-color: var(--neutral900);
+  background-color: rgb(var(--neutral900));
 }
