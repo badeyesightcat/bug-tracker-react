@@ -36,4 +36,4 @@
 
 ## Web font
 
-- utilize 'Epilogue' from [Google Web Fonts](https://fonts.google.com/specimen/Epilogue?query=epi)
+- use 'Epilogue' from [Google Web Fonts](https://fonts.google.com/specimen/Epilogue?query=epi)
