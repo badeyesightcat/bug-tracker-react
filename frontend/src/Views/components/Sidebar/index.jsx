@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import classNames from 'classnames';
-import { signOut } from '../../Controllers/Redux/authSlice';
+import { signOut } from '../../../Controllers/Redux/authSlice';
 import './sidebar.css';
 
 export default () => {

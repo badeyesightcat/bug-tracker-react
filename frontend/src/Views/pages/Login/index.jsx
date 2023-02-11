@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import classNames from 'classnames';
 import { useDispatch } from 'react-redux';
-import { signIn } from '../../Controllers/Redux/authSlice';
+import { signIn } from '../../../Controllers/Redux/authSlice';
 import './login.css';
 
 export default () => {

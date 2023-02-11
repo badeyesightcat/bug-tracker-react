@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import classNames from 'classnames';
-import priorityController from '../../Controllers/priorityController';
+import priorityController from '../../../Controllers/priorityController';
 import './bugItem.css';
 
 export default function BugItem({ clicked, ...props }) {

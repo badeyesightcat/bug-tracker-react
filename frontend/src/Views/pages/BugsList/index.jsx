@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getBugs } from '../../Controllers/Redux/bugSlice';
-import BugItem from '../BugItem/bugItem';
+import { getBugs } from '../../../Controllers/Redux/bugSlice';
+import BugItem from '../../components/BugItem';
 
 export default () => {
   const dispatch = useDispatch();
