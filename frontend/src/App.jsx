@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './Views/pages/Login';
-import ViewBugs from './Views/pages/BugsList';
+import BugsList from './Views/pages/BugsList';
 import Sidebar from './Views/components/Sidebar';
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
         <>
           <Sidebar />
           <Routes>
-            <Route path='/viewBugs' element={<ViewBugs />}></Route>
+            <Route path='/bugsList' element={<BugsList />}></Route>
           </Routes>
         </>
       )}
