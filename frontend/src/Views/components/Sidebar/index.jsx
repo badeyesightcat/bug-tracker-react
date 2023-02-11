@@ -34,7 +34,7 @@ export default () => {
             <Link
               className='nav-link'
               onClick={() => setActiveItemIdx(1)}
-              to='/viewBugs'>
+              to='/bugsList'>
               Bugs List
             </Link>
           </li>
