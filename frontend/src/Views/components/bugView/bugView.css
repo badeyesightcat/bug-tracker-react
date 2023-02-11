@@ -1,0 +1,9 @@
+.has-bug-details {
+  padding: 4rem 3rem;
+}
+
+.bug-detail-title {
+  font: 2rem/1 var(--fontFamily);
+  margin-bottom: 2rem;
+  color: rgb(var(--neutral900));
+}
