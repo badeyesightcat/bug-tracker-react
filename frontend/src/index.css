@@ -64,7 +64,7 @@
 .page-title {
   font: 5rem/1 var(--fontFamily);
   margin: -1.25rem 0 2rem;
-  color: rgb(var(--primeMain));
+  color: rgb(var(--neutral900));
 }
 
 .theme-light {

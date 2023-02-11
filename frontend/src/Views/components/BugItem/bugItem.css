@@ -13,8 +13,7 @@
 
 .bug-item:focus,
 .bug-item:hover {
-  border-color: rgb(var(--primeLight));
-  background-color: rgb(var(--primeLight));
+  background-color: rgb(var(--neutral900));
   color: rgb(var(--neutral200));
   transform: scale(1.05);
   transition: transform 500ms ease-in-out;
