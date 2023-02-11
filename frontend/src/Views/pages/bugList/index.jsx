@@ -19,6 +19,13 @@ export default function BugList() {
     }));
   };
 
+  const handleBugViewCloseClick = () => {
+    setDetailView((prev) => ({
+      isDisplayed: !prev.isDisplayed,
+      info: null,
+    }));
+  };
+
   useEffect(() => {
     dispatch(getBugs());
   }, [bugs.length < 1]);
@@ -35,7 +42,9 @@ export default function BugList() {
           />
         ))}
       </ul>
-      {detailView.isDisplayed && <BugView {...detailView.info} />}
+      {detailView.isDisplayed && (
+        <BugView {...detailView.info} clickClose={handleBugViewCloseClick} />
+      )}
     </div>
   );
 }
