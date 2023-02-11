@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import classNames from 'classnames';
-import { signOut } from '../../../Controllers/Redux/authSlice';
+import { signOut } from '../../../controllers/redux/authSlice';
 import './sidebar.css';
 
-export default () => {
+export default function Sidebar() {
   const dispatch = useDispatch();
   const { auth } = useSelector((state) => state);
   const handleSignOut = () => {
@@ -55,4 +55,4 @@ export default () => {
       </button>
     </aside>
   );
-};
+}

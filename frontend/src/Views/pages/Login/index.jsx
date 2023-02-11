@@ -1,10 +1,10 @@
 import React, { useState, useMemo } from 'react';
 import classNames from 'classnames';
 import { useDispatch } from 'react-redux';
-import { signIn } from '../../../Controllers/Redux/authSlice';
+import { signIn } from '../../../controllers/redux/authSlice';
 import './login.css';
 
-export default () => {
+export default function Login() {
   const dispatch = useDispatch();
   const [formField, setFormField] = useState({
     username: '',
@@ -66,4 +66,4 @@ export default () => {
       </form>
     </section>
   );
-};
+}

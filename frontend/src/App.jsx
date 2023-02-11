@@ -1,8 +1,8 @@
 import { useSelector } from 'react-redux';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Login from './Views/pages/Login';
-import BugsList from './Views/pages/BugsList';
-import Sidebar from './Views/components/Sidebar';
+import Login from './views/pages/login';
+import BugsList from './views/pages/bugList';
+import Sidebar from './views/components/sidebar';
 
 function App() {
   const { auth } = useSelector((state) => state);

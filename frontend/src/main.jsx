@@ -6,9 +6,9 @@ import './index.css';
 import App from './App';
 
 // Reducers
-import authReducer from './Controllers/Redux/authSlice';
-import bugReducer from './Controllers/Redux/bugSlice';
-import userReducer from './Controllers/Redux/userSlice';
+import authReducer from './controllers/redux/authSlice';
+import bugReducer from './controllers/redux/bugSlice';
+import userReducer from './controllers/redux/userSlice';
 
 // Redux configuration
 const reducer = combineReducers({
