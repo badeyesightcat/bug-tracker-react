@@ -7,3 +7,41 @@
   margin-bottom: 2rem;
   color: rgb(var(--neutral900));
 }
+
+.bug-detail-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+}
+
+.bug-detail-meta-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  height: 3rem;
+  border: 2px solid rgb(var(--neutral300));
+  border-radius: 1.5rem;
+}
+
+.bug-detail-meta-item:focus,
+.bug-detail-meta-item:hover {
+  background-color: rgb(var(--primeLight));
+  border-color: rgb(var(--primeLight));
+  color: rgb(var(--neutral200));
+  transition: all 200ms ease-out;
+  cursor: pointer;
+}
+
+.btn-mark-complete {
+  border-radius: 1.5rem;
+  height: 3rem;
+  background-color: rgba(var(--neutral900), 0.15);
+}
+
+.btn-mark-complete:focus,
+.btn-mark-complete:hover {
+  border: 2px solid rgb(var(--neutral900));
+  color: rgb(var(--neutral900));
+  background-color: transparent;
+}
