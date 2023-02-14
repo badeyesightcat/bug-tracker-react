@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import classNames from 'classnames';
 import { signOut } from '../../../controllers/redux/authSlice';
 import './sidebar.css';
 
@@ -15,37 +14,40 @@ export default function Sidebar() {
 
   return (
     <aside className='sidebar flex flex-col'>
-      <Link to='/'>
+      <NavLink to='/'>
         <h1 className='brandname small' title='Go Home'>
           Landscape
         </h1>
-      </Link>
+      </NavLink>
       <nav className='nav-wrapper'>
         <ul className='nav-list flex flex-col'>
-          <li className={classNames({ active: activeItemIdx === 0 })}>
-            <Link
-              className='nav-link'
-              onClick={() => setActiveItemIdx(0)}
+          <li>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? 'nav-link active' : 'nav-link'
+              }
               to='/'>
-              Dashboard
-            </Link>
+              <span>Dashboard</span>
+            </NavLink>
           </li>
-          <li className={classNames({ active: activeItemIdx === 1 })}>
-            <Link
-              className='nav-link'
-              onClick={() => setActiveItemIdx(1)}
+          <li>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? 'nav-link active' : 'nav-link'
+              }
               to='/bugsList'>
-              Bugs List
-            </Link>
+              <span>Bugs List</span>
+            </NavLink>
           </li>
           {auth.admin && (
-            <li className={classNames({ active: activeItemIdx === 2 })}>
-              <Link
-                className='nav-link'
-                onClick={() => setActiveItemIdx(2)}
+            <li>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? 'nav-link active' : 'nav-link'
+                }
                 to='/createBug'>
-                Create Bug
-              </Link>
+                <span>Create Bug</span>
+              </NavLink>
             </li>
           )}
         </ul>
